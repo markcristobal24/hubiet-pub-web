@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="content">
-            <h1>HUBIENT BAR <br>& LOUNGE</h1>
+            <h1>HUBIENT BAR <br>& PUTANGINA</h1>
             <P>" Don’t waste your time at home; enjoy the day with Hubient bar and lounge "</P>
             <div>
                 <button type="button"><a href="login.php"><span></span>MAKE A RESERVATION</a></button>
