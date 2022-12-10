@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Hubient Bar & Lounge</title>
     <link rel="stylesheet" href="register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
         function check() {

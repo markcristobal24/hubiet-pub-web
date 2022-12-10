@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-
+<?php 
+    session_start();
+    if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
+	{
+	header('Location: login.php');
+	exit();
+	}
+ ?>
 <head>
     <title>Hubient Bar & Lounge</title>
     <link rel="stylesheet" href="home.css">
