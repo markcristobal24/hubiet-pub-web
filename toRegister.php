@@ -11,6 +11,7 @@
                         VALUES ('$firstname', '$lastname', '$username', '$password', '$phone')";
 
     if (mysqli_query($con,$query)) {
+        $_SESSION["firstname"] = $firstname;
         echo ("<script>alert('Account Registered')</script>");
         header("refresh: 0; url=login.php");
     }

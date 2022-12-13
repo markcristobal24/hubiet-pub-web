@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
     
 }
 
@@ -9,12 +9,14 @@ body {
     background-image: url("otherBG.jpg");
     background-size: cover;
     background-position: center;
-    height: auto;
 }
 
 .banner {
     width: 100%;
     height: 100vh;
+    /*background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(otherBG.jpg);*/
+    
+
 }
 
 .navbar {
@@ -59,6 +61,33 @@ body {
     width: 100%;
 }
 
+ul li ul.dropdown li {
+    display: block;
+    margin: 30px;
+    
+  }
+  
+  ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    
+  }
+  
+  ul li:hover ul.dropdown {
+    display: block;
+    
+    
+  }
+  
+  .welcome {
+    text-decoration: none;
+    color: #ffff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
 .content {
     width: 100%;
     position: absolute;
@@ -66,12 +95,12 @@ body {
     transform: translateY(-50%);
     text-align: center;
     color: white;
-
+    
 }
 
 .content h1 {
-    font-size: 100px;
-    margin-top: 50px;
+    font-size: 60px;
+    margin-top: 80px;
 }
 
 .content p {
@@ -85,7 +114,7 @@ button {
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 50px 10px 100px 10px;
+    margin: 50px 10px 150px 10px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #d18f0a;
@@ -118,12 +147,14 @@ button:hover span {
     width: 100%;
 }
 
-
-
 .footer .social {
     text-align: center;
     padding-bottom: 25px;
     color: #ffff;
+}
+
+.footer {
+    margin-top: -11%;
 }
 
 .footer .social a {
@@ -137,11 +168,50 @@ button:hover span {
     display: inline-block;
     text-align: center;
     border-radius: 40%;
-    margin: 0 8px;
+    margin: -5px 8px;
     opacity: 0.70;
 }
 
 .footer .social a:hover {
     opacity: 0.9;
     border: 1px solid #d18f0a;
+}
+
+.aboutmain::first-letter {
+    color: rgb(255, 132, 0);
+    margin-right: 0px;
+    font-size: 65px;
+    font-weight: bold;
+  }
+
+.aboutmain {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    margin: -20% 10%;
+    text-align: center;
+    color: white;
+    float: left;
+  }
+  .aboutmain p {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 5%;
+    line-height: 1.5;
+    color: #ddd;
+    font-style: normal;
+    text-align: justify;
+  }
+
+.drinksmain{
+    position: absolute;
+    margin: -15% 55%;
+    border: rgb(255, 132, 0) solid;
+    float: right;
+}
+
+.copyright{
+    margin-top: 3.5%;
+    line-height: 25px;
+    font-style: italic;
 }

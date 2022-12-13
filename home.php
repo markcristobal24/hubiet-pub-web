@@ -22,20 +22,25 @@
         <div class="navbar">
             <img src="hubientLogo.png" alt="Hubient Logo" class="logo" title="Hubient">
             <ul>
-                <li><a href="mainpage.php">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="about-user.php">About</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
                       echo $_SESSION ["username"];
                         
-                    ?></li>
-                <li><a href="toLogout.php">Logout</a></li>
+                    ?>&nbsp;▼
+                    <ul class="dropdown">
+                        <li><a href="changePass.php">Change Password</a></li>
+                        <li><a href="toLogout.php">Logout</a></li>
+                    </ul>
+                </li>
+                
             </ul>
         </div>
         <div class="content">
             <h1>HUBIENT BAR <br>& LOUNGE</h1>
             <P>" Don’t waste your time at home; enjoy the day with Hubient bar and lounge "</P>
             <div>
-                <button type="button"><a href="login.php"><span></span>MAKE A RESERVATION</a></button>
+                <button type="button"><a href="reservation.php"><span></span>MAKE A RESERVATION</a></button>
             </div>
 
             <section class="footer">
