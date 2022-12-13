@@ -5,15 +5,19 @@
     
 }
 
-.banner {
-    width: 100%;
-    height: 100vh;
-    /*background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(otherBG.jpg);*/
+body {
     background-image: url("otherBG.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #d18f0a;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    /*background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(otherBG.jpg);*/
+    
+    
 
 }
 
@@ -115,7 +119,7 @@ ul li ul.dropdown li {
 }
 
 .footer {
-    margin-top: -8%;
+    margin-top: -9%;
 }
 
 .footer .social a {

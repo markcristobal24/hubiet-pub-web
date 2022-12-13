@@ -158,6 +158,33 @@ textarea{
     width: 100%;
 }
 
+ul li ul.dropdown li {
+    display: block;
+    margin: 30px;
+    
+  }
+  
+  ul li ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    
+  }
+  
+  ul li:hover ul.dropdown {
+    display: block;
+    
+    
+  }
+  
+  .welcome {
+    text-decoration: none;
+    color: #ffff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;

@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php 
+    session_start();
+    if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
+	{
+	header('Location: login.php');
+	exit();
+	}
+ ?>
 <html>
 
 <head>
@@ -12,9 +20,17 @@
     <div class="navbar">
       <img src="hubientLogo.png" alt="Hubient Logo" class="logo" title="Hubient">
       <ul>
-        <li><a href="mainpage.php">Home</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="login.php">Login</a></li>
+      <li><a href="home.php">Home</a></li>
+                <li><a href="about-user.php">About</a></li>
+                <li class="welcome">WELCOME&nbsp; <?php 
+                      echo $_SESSION ["username"];
+                        
+                    ?>&nbsp;▼
+                    <ul class="dropdown">
+                        <li><a href="changePass.php">Change Password</a></li>
+                        <li><a href="toLogout.php">Logout</a></li>
+                    </ul>
+                </li>
       </ul>
     </div>
 
