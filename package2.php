@@ -48,7 +48,7 @@
             <input type="datetime-local" class="field" placeholder="Date and time" required name="date"
               value="2020-11-16T20:00" />
             <textarea placeholder="Additional Message" class="field"></textarea>
-            <button class="btn"><a href="payment2.php">
+            <button type="button" class="btn"><a href="payment2.php">
                 <p>PROCEED TO PAYMENT</p></button>
             </form> 
           </div>
