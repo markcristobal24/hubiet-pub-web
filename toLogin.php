@@ -7,13 +7,21 @@
 	}	
 	$user = $_POST["username"];
 	$pass = $_POST["psw"];
+	$userAdmin = $_POST["username"];
+	$passAdmin = $_POST["psw"];
 	$query = "SELECT * FROM customer WHERE username='$user' and password='$pass'";
 	$result = mysqli_query($con,$query);
 	$count =  mysqli_num_rows($result);
+
+
 	if($count==1){
 		$_SESSION["username"] = $user;
 		$_SESSION["psw"] = $pass;
 		header("Location: home.php");
+	} else if ($user == "admin1" && $pass = "admin1234") {
+		$_SESSION["username"] = $user;
+		$_SESSION["psw"] = $pass;
+		header("Location: adminhome.php");
 	}
 	else{
 		echo ("<script>alert('Login failed.')</script>");
