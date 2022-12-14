@@ -24,6 +24,7 @@
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
+                <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
                       echo $_SESSION ["username"];
                         

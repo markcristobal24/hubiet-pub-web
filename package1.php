@@ -40,16 +40,16 @@
           <div class="left"></div>
           <div class="right">
             <h2>PACKAGE #1</h2>
-          <form> 
-            <input type="text" class="field" placeholder="Name" />
-            <input type="text" class="field" placeholder="Email" />
-            <input type="text" class="field" placeholder="Phone" />
-            <input type="number" class="field" placeholder="How many people" required name="People" />
-            <input type="datetime-local" class="field" placeholder="Date and time" required name="date"
+          <form method="post" action="toPackage1.php"> 
+            <input type="text" class="field" placeholder="Name"  name="fullname" required/>
+            <input type="text" class="field" placeholder="Email" name="email" required/>
+            <input type="text" class="field" placeholder="Phone" name="phone" required/>
+            <input type="number" class="field" placeholder="How many people" name="noPeople" required  />
+            <input type="datetime-local" class="field" placeholder="Date and time" name="date" required 
               value="2020-11-16T20:00" />
-            <textarea placeholder="Additional Message" class="field"></textarea>
-            <button type="button" class="btn"><a href="payment1.php">
-                <p>PROCEED TO PAYMENT</p></button>
+            <textarea placeholder="Additional Message" name="message" class="field"></textarea>
+            <input class="btn" type="submit" value="PROCEED TO PAYMENT">
+                
             </form>       
           </div>
         </div>
