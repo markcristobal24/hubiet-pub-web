@@ -8,8 +8,8 @@
     $noPeople = $_POST["noPeople"];
     $date = $_POST["date"];
     $message = $_POST["message"];
-    $package = "Package #1";
-    $price = "PHP2,500";
+    $package = "Package #2";
+    $price = "PHP3,000";
     $status = "Unpaid";
 
 
@@ -20,7 +20,7 @@
             
         if ($count==1) {
             echo ("<script>alert('Date is already Reserved. Please set another Date')</script>");
-            header("refresh: 0; url=package1.php");
+            header("refresh: 0; url=package2.php");
            
         } else if ($count==0){
             

@@ -23,7 +23,7 @@
       <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">
@@ -39,10 +39,13 @@
         <div class="contact-box">
           <div class="right">
             <h2>Payment Method</h2>
-            <input type="text" class="field" placeholder="GCASH #" />
-            <input type="text" class="field" placeholder="REFERENCE #" />
-            <input type="text" class="field" placeholder="AMOUNT" />
-            <button class="btn">SUBMIT<a href="payment1.php"></button>
+          <form method="post" action="toPay.php">
+          <input type="text" class="field" placeholder="RESERVATION ID"  name="reserveId" required/>
+            <input type="text" class="field" placeholder="GCASH #"  name="gcash" required/>
+            <input type="text" class="field" placeholder="REFERENCE #" name="reference" required/>
+            <input type="text" class="field" placeholder="AMOUNT" name="amount" required/>
+            <input class="btn" type="submit" value="SUBMIT"/>
+            </form>  
           </div>
         </div>
       </div>

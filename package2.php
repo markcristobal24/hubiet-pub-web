@@ -23,7 +23,7 @@
       <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">
@@ -40,16 +40,15 @@
           <div class="left"></div>
           <div class="right">
             <h2>PACKAGE #2</h2>
-          <form>
-            <input type="text" class="field" placeholder="Name" />
-            <input type="text" class="field" placeholder="Email" />
-            <input type="text" class="field" placeholder="Phone" />
-            <input type="number" class="field" placeholder="How many people" required name="People" />
-            <input type="datetime-local" class="field" placeholder="Date and time" required name="date"
-              value="2020-11-16T20:00" />
-            <textarea placeholder="Additional Message" class="field"></textarea>
-            <button type="button" class="btn"><a href="payment2.php">
-                <p>PROCEED TO PAYMENT</p></button>
+          <form method="post" action="toPackage2.php">
+            <input type="text" class="field" placeholder="Name" name="fullname" required/>
+            <input type="text" class="field" placeholder="Email" name="email" required/>
+            <input type="text" class="field" placeholder="Phone" name="phone" required/>
+            <input type="number" class="field" placeholder="How many people" required name="noPeople" />
+            <input type="date" class="field" placeholder="Date and time" required name="date"
+              value="<?php echo date('Y-m-d'); ?>" />
+            <textarea placeholder="Additional Message" class="field" name="message"></textarea>
+            <input class="btn" type="submit" value="Reserve">
             </form> 
           </div>
         </div>

@@ -40,6 +40,8 @@ body {
     border-bottom: 1px solid #fff;
 }
 
+
+
 .t1 {
 background-color: #444;
 }
@@ -73,9 +75,26 @@ background-color: #444;
 .t333{
     background-color: none;
 }
-   
-        
 
+.t5 {
+    
+    background-color: #444;
+}
+.t2222{
+    background-color: none;
+}
+
+.t33{
+    background-color: none;
+}
+
+.t55{
+    background-color: none;
+}
+
+.t555{
+    background-color: none;
+}
 
 .sidebar ul li:first-child:hover {
     background: none;
@@ -85,7 +104,7 @@ background-color: #444;
     width: 100%;
     text-decoration: none;
     color: #fff;
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
 }
@@ -117,18 +136,16 @@ background-color: #444;
 }
 
 .top-bar {
-    position: fixed;
-    height: 60px;
-    width: calc(100% - 300px);
-    background:  #774c08;
-    display: grid;
-    grid-template-columns: 10fr 0.4fr 1fr;
-    grid-gap: 5px;
+    width: 85%;
+    margin: auto;
+    padding: 35px 60px;
+    display: flex;
     align-items: center;
-    color: #444;
-    padding: 0 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    justify-content: space-between;
+    background:  #774c08;
+    position: fixed;
+    height: 80px;
+    
 }
 
 .top-bar .search {
@@ -252,7 +269,7 @@ table {
     border-collapse: collapse;
 }
 
-thead td {
+thead th {
     font-weight: 600;
     color: #333;
 }
@@ -262,7 +279,7 @@ table tr {
 }
 
 tbody tr:hover {
-    background: #d18f0a;
+    background:  #774c08;
     color: #fff;
 }
 
@@ -270,11 +287,11 @@ table tbody tr:last-child {
     border-bottom: none;
 }
 
-td {
+th {
     padding: 9px 5px;
 }
 
-td i {
+th i {
     padding: 7px;
     color: #fff;
     border-radius: 50px;
@@ -285,7 +302,7 @@ td i {
     width: 100px;
 }
 
-.lastest-bookings2 table tbody td:last-child {
+.lastest-bookings2 table tbody th:last-child {
     white-space: nowrap;
     width: 100px;
 }
@@ -374,7 +391,7 @@ td i {
     display: inline-block;
     margin: 0 20px;
     position: relative;
-    margin-left: 800px;
+    
 }
 
 .navbar ul li a {
@@ -405,5 +422,20 @@ td i {
     text-transform: uppercase;
     cursor: pointer;
   }
+
+  .del {
+    width: 65px;
+    padding: 5px 0;
+    text-align: center;
+    
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d18f0a;
+    background: transparent;
+    
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
   
  

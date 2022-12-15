@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     session_start();
     if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
@@ -7,6 +6,8 @@
 	exit();
 	}
  ?>
+<!DOCTYPE html>
+
 <head>
     <title>Hubient Bar & Lounge</title>
     <link rel="stylesheet" href="home.css">
@@ -26,7 +27,7 @@
                 <li><a href="about-user.php">About</a></li>
                 <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">

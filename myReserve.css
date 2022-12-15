@@ -89,7 +89,7 @@ ul li:hover ul.dropdown {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 800px;
+  width: 950px;
   background: white;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -110,5 +110,43 @@ ul li:hover ul.dropdown {
     padding: 0 20px 20px 20px;
     margin-bottom: 20px;
 }
+
+.del {
+    width: 65px;
+    padding: 5px 0;
+    text-align: center;
+    
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d18f0a;
+    background: transparent;
+    
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pay {
+    width: 150px;
+    padding: 5px 0;
+    text-align: center;
+    
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #d18f0a;
+    background: #d18f0a;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pay a {
+  text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+
 
 

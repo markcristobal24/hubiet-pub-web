@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     session_start();
     if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
@@ -7,6 +6,8 @@
 	exit();
 	}
  ?>
+<!DOCTYPE html>
+
 <html>
 
 <head>
@@ -22,8 +23,9 @@
       <ul>
       <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
+                <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">
@@ -45,10 +47,10 @@
             <input type="text" class="field" placeholder="Email" name="email" required/>
             <input type="text" class="field" placeholder="Phone" name="phone" required/>
             <input type="number" class="field" placeholder="How many people" name="noPeople" required  />
-            <input type="datetime-local" class="field" placeholder="Date and time" name="date" required 
-              value="2020-11-16T20:00" />
+            <input type="date" class="field" placeholder="Date and time" name="date" required 
+            value="<?php echo date('Y-m-d'); ?>"  />
             <textarea placeholder="Additional Message" name="message" class="field"></textarea>
-            <input class="btn" type="submit" value="PROCEED TO PAYMENT">
+            <input class="btn" type="submit" value="Reserve">
                 
             </form>       
           </div>

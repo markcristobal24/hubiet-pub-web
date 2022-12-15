@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     session_start();
     if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
@@ -6,7 +5,11 @@
 	header('Location: login.php');
 	exit();
 	}
+
+ 
  ?>
+<!DOCTYPE html>
+
 
 <html lang="en" dir="ltr">
 
@@ -26,8 +29,9 @@
     <ul>
     <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
+                <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">
@@ -40,9 +44,13 @@
 
   <div class="center">
     <h1>My Reservations</h1>
+  <form method = "post" action="deleteReserve.php">
     <?php
+        error_reporting(0);
         require "connect.php";
-        $query = "SELECT * FROM reserve";
+        $email = $_SESSION["email"];
+        $phone = $_SESSION["phone"];
+        $query = "SELECT * FROM reserve where email = '$email' and phone = '$phone'";
         $result = mysqli_query($con,$query);
         echo "<table border ='1'>
         <tr>
@@ -53,10 +61,13 @@
             <th>Number of People</th>
             <th>Date</th>
             <th>Price</th>
+            <th>Package</th>
+            <th>Status</th>
         </tr>";
-
+        
         if (mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)){
+                $user = $row['reserveId'];
                 echo "<tr>";
                 echo "<td>" . $row['reserveId'] . "</td>";
                 echo "<td>" . $row['name'] . "</td>";
@@ -65,6 +76,10 @@
                 echo "<td>" . $row['noPeople'] . "</td>";
                 echo "<td>" . $row['date'] . "</td>";
                 echo "<td>" . $row['price'] . "</td>";
+                echo "<td>" . $row['packageType'] . "</td>";
+                echo "<td>" . $row['status'] . "</td>";
+                echo "<td> <button type='submit' class='del' name='delete' value='$user'>Delete</button> </td>";
+                
                 echo "</tr>";
             }
         } 
@@ -75,6 +90,8 @@
         mysqli_close($con);
 				
     ?>
+  </form>
+  <button type="button" class = "pay"><a href="payment1.php"><span></span>PROCEED TO PAYMENT</a></button>
   </div>
 
 

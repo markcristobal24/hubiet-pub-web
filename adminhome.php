@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php 
     session_start();
     if(!isset($_SESSION["username"]) && !isset($_SESSION["psw"]))
@@ -7,6 +6,7 @@
 	exit();
 	}
  ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,28 +29,22 @@
             <img src="hubientLogo.png" alt="Hubient Logo" class="logo" title="Hubient" />
           </a>
         </li>
-        <li class="t1">
-          <a href="adminhome.php">
-            <img src="dashboard.png" alt="test" class="img2" width="23px" height="20px" />
-            <div class="title1">Dashboard</div>
-          </a>
-        </li>
-        <li class="t22">
-          <a href="bookings.php">
+        <li class="t2">
+          <a href="adminHome.php">
             <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
             <div class="title">Bookings</div>
           </a>
         </li>
-        <li class="t333">
+        <li class="">
           <a href="managepackages.php">
             <img src="managepackagesicon.png" alt="test" class="img2" width="23px" height="20px" />
             <div class="title">Manage Packages</div>
           </a>
         </li>
-        <li class="t4">
-          <a href="#">
-            <img src="settings.png" alt="test" class="img2" width="23px" height="20px" />
-            <div class="title">Account Settings</div>
+        <li class="t555">
+          <a href="accounts.php">
+            <img src="accounticon.png" alt="test" class="img2" width="23px" height="23px" />
+            <div class="title">Accounts</div>
           </a>
         </li>
       </ul>
@@ -58,124 +52,64 @@
     <div class="main">
       <div class="top-bar">
         <div class="search">
-          <input type="text" name="search" placeholder="Search" />
         </div>
         <div class="navbar">
           <ul>
-            <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
-                        
-                    ?>
-                    
-           </li>
-            <li><a href="toLogout.php">Logout</a></li>
+          <li class="welcome">WELCOME&nbsp; <?php 
+                      echo $_SESSION ["username"];?>               
+          </li>
+          <li class="welcome"><a href="toLogout.php">Logout</a></li>
           </ul>
         </div>
       </div>
-      <div class="cards">
-        <div class="card">
-          <div class="card-content">
-            <div class="number">5</div>
-            <div class="card-name">Bookings</div>
-          </div>
-          <div class="icon-box">
-            <img src="bookingicon.png" alt="test" class="img2" width="50px" height="50px" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">0</div>
-            <div class="card-name">Pending Payments</div>
-          </div>
-          <div class="icon-box">
-            <img src="paymentcard.png" alt="test" class="img2" width="50px" height="55px" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">3</div>
-            <div class="card-name">Available Rooms</div>
-          </div>
-          <div class="icon-box">
-            <img src="wineicon.png" alt="test" class="img2" width="50px" height="50px" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-content">
-            <div class="number">PHP 15,500</div>
-            <div class="card-name">Earnings</div>
-          </div>
-          <div class="icon-box">
-            <img src="coinicon.png" alt="test" class="img2" width="50px" height="50px" />
-          </div>
-        </div>
-      </div>
-      <div class="tables">
-        <div class="lastest-bookings">
+      <div class="tablesbook">
+        <div class="lastest-bookings2">
           <div class="heading">
-            <h2>Lastest Bookings</h2>
-            <a href="#" class="btn">View All</a>
+            <h2>Bookings</h2>
           </div>
-          <table class="">
-            <thead>
-              <td>Name</td>
-              <td>Package #</td>
-              <td>Price</td>
-              <td>Actions</td>
-            </thead>
-            <tbody>
+         
+          <form method="post" action="deleteBookings.php">
+            <?php
+              error_reporting(0);
+              require "connect.php";
+              $query = "SELECT * FROM reserve";
+              $result = mysqli_query($con, $query);
+              echo "<table>
+              <thead>
               <tr>
-                <td>John Paulo Sulit</td>
-                <td>3</td>
-                <td>PHP 5,000</td>
-                <td>
-                  <a href="#" class="">View</a>
-                  <a href="#" class="">Remove</a>
-                  <a href="#" class="">Edit</a>
-                </td>
+                <th>Reservation Id</th>
+                <th>Name</th>
+                <th>Package#</th>
+                <th>Date</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Action</th>
               </tr>
-              <tr>
-                <td>Arvin Bok</td>
-                <td>1</td>
-                <td>PHP 2,500</td>
-                <td>
-                  <a href="#" class="">View</a>
-                  <a href="#" class="">Remove</a>
-                  <a href="#" class="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Mark Josh Cristobal</td>
-                <td>2</td>
-                <td>PHP 3,000</td>
-                <td>
-                  <a href="#" class="">View</a>
-                  <a href="#" class="">Remove</a>
-                  <a href="#" class="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Joel Leonor</td>
-                <td>3</td>
-                <td>PHP 5,000</td>
-                <td>
-                  <a href="#" class="">View</a>
-                  <a href="#" class="">Remove</a>
-                  <a href="#" class="">Edit</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Stephen Reonal</td>
-                <td>1</td>
-                <td>PHP 2,500</td>
-                <td>
-                  <a href="#" class="">View</a>
-                  <a href="#" class="">Remove</a>
-                  <a href="#" class="">Edit</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              </thead>";
+
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                  $user = $row['reserveId'];
+                  
+                  echo "<tr>";
+                  echo "<th>" . $row['reserveId'] . "</th>";
+                  echo "<th>" . $row['name'] . "</th>";
+                  echo "<th>" . $row['packageType'] . "</th>";
+                  echo "<th>" . $row['date'] . "</th>";
+                  echo "<th>" . $row['price'] . "</th>";
+                  echo "<th>" . $row['status'] . "</th>";
+                  echo "<th> <button type='submit' class='del' name='delete' value='$user'>Delete</button> </th>";
+                  echo "</tr>";
+                  
+                }
+              }
+              echo "</table>";
+              mysqli_close($con);
+          
+              
+            ?>
+           
+          </form> 
         </div>
       </div>
     </div>

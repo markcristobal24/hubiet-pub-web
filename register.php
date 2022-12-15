@@ -56,6 +56,13 @@
             </div>
 
             <div class="txt_field">
+                <input type="text" name="email" required>
+                <span></span>
+                <label>Email Address</label>
+            </div>
+
+
+            <div class="txt_field">
                 <input type="text" name="num" required>
                 <span></span>
                 <label>Phone Number</label>
