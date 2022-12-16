@@ -98,7 +98,7 @@
                   echo "<th>" . $row['date'] . "</th>";
                   echo "<th>" . $row['price'] . "</th>";
                   echo "<th>" . $row['status'] . "</th>";
-                  echo "<th> <button type='submit' class='del' name='delete' value='$user'>Delete</button> </th>";
+                  echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
                   echo "</tr>";
                   
                 }

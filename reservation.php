@@ -69,7 +69,7 @@
             <h3>VIP PACKAGE #3</h3>
             <img src="img/package3.jpg" alt="package1" class="img3">
             <p class="amount3">PHP 5,000</p>
-            <p class="prod3">3 HOURS<br>3 BCUKET OF BEERS (RED HORSE, PALE PILSEN, SAN MIG LIGHT, LEMON, OR
+            <p class="prod3">3 HOURS<br>3 BUCKET OF BEERS (RED HORSE, PALE PILSEN, SAN MIG LIGHT, LEMON, OR
                 APPLE)<br>1
                 NACHOS, 1 DYNAMITE, 1 PORK SISIG, 1 CHICKEN WINGS SALTED EGG, 1 CHICKEN TERIYAKI, 1 CRISPY BICOL
                 EXPRESS, 1 SHANGHAI, 1 CHEESE STICK</p>

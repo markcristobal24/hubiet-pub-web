@@ -78,7 +78,7 @@
                 echo "<td>" . $row['price'] . "</td>";
                 echo "<td>" . $row['packageType'] . "</td>";
                 echo "<td>" . $row['status'] . "</td>";
-                echo "<td> <button type='submit' class='del' name='delete' value='$user'>Delete</button> </td>";
+                echo "<td> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </td>";
                 
                 echo "</tr>";
             }

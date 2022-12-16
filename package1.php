@@ -44,8 +44,8 @@
             <h2>PACKAGE #1</h2>
           <form method="post" action="toPackage1.php"> 
             <input type="text" class="field" placeholder="Name"  name="fullname" required/>
-            <input type="text" class="field" placeholder="Email" name="email" required/>
-            <input type="text" class="field" placeholder="Phone" name="phone" required/>
+            <input type="text" class="field" placeholder="Email" name="email"  value = "<?php echo $_SESSION["email"]?>"readonly/>
+            <input type="text" class="field" placeholder="Phone" name="phone" value = "<?php echo $_SESSION["phone"]?>" readonly/>
             <input type="number" class="field" placeholder="How many people" name="noPeople" required  />
             <input type="date" class="field" placeholder="Date and time" name="date" required 
             value="<?php echo date('Y-m-d'); ?>"  />
