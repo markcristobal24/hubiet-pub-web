@@ -11,7 +11,7 @@
 <html>
 
 <head>
-  <title>Hubient Bar & Lounge</title>
+  <title>Package 1 | Hubient</title>
   <link rel="stylesheet" type="text/css" href="package1.css" />
   <link rel="stylesheet" href = "https://cdn.jsdelivr.net/npm/flatpckr/dist/flatpickr.min.css"></link>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>

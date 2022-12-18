@@ -20,7 +20,7 @@
     var button = document.getElementById("approve");
     button.style.visibility="hidden";
   </script>
-  <title>Hubient Bar & Lounge</title>
+  <title>Bookings | Hubient</title>
 </head>
 
 <body>

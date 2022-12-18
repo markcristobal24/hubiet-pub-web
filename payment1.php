@@ -40,7 +40,7 @@
             <h1>Payment Method</h1>
           <form method="post" action="toPay.php">
             <div class="txt_field">
-              <input type="text" name="reserveId"  required>
+              <input type="text" name="reserveId" value="<?php echo $_SESSION["reserve"] ?>" required>
               <span></span>
               <label>Reservation ID</label>
             </div>

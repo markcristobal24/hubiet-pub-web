@@ -17,7 +17,7 @@
   <link rel="stylesheet" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous" />
 
-  <title>Hubient Bar & Lounge</title>
+  <title>Accounts | Hubient</title>
 </head>
 
 <body>

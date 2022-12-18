@@ -10,7 +10,7 @@
 <html>
 
 <head>
-  <title>Hubient Bar & Lounge</title>
+  <title>Package 2 | Hubient</title>
   <link rel="stylesheet" type="text/css" href="package1.css" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>

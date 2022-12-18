@@ -16,7 +16,7 @@
                    
                 } else if ($count==0 && $count2==0){
                     $_SESSION["date"] = $date;            
-                    header("refresh: 0; url=package1.php");
+                    header("refresh: 0; url=package3.php");
                 }
         
 ?>

@@ -15,7 +15,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Hubient Bar & Lounge</title>
+  <title>My Reservations | Hubient</title>
   <link rel="stylesheet" href="myReserve.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -89,7 +89,8 @@
                 echo "<th>" . $row['price'] . "</th>";
                 echo "<th>" . $row['packageType'] . "</th>";
                 echo "<th>" . $row['status'] . "</th>";
-  
+                
+
                 if ($status == "Unpaid") {
                   echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
                     
