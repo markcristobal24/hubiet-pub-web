@@ -46,11 +46,12 @@
           <div class="left"></div>
           <div class="right">
             <h2>PACKAGE #1</h2>
-          <form method="post" action="toPackage1.php"> 
-            <input type="text" class="field" placeholder="Name"  name="fullname" value = "<?php echo $_SESSION["full"] ?>" readonly/>
+          <form method="post" action="toPackage1.php">
+          <input type="text" class="field" placeholder="Name"  name="fullname" value = "<?php echo $_SESSION["full"] ?>" readonly/>
             <input type="text" class="field" placeholder="Email" name="email"  value = "<?php echo $_SESSION["email"]?>"readonly/>
             <input type="text" class="field" placeholder="Phone" name="phone" value = "<?php echo $_SESSION["phone"]?>" readonly/>
             <input type="number" class="field" placeholder="How many person/s" name="noPeople" required  />
+            
             <input type="date" class="field" placeholder="Date and time" name="date" id="date-picker" value="<?php echo $_SESSION["date"] ?>" readonly/>
             <script language="javascript">
               var today = new Date ();
