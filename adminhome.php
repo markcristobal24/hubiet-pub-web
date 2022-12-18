@@ -16,7 +16,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
     crossorigin="anonymous" />
-
+  <script>
+    var button = document.getElementById("approve");
+    button.style.visibility="hidden";
+  </script>
   <title>Hubient Bar & Lounge</title>
 </head>
 
@@ -33,6 +36,12 @@
           <a href="adminHome.php">
             <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
             <div class="title">Bookings</div>
+          </a>
+        </li>
+        <li class="">
+          <a href="approved.php">
+            <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
+            <div class="title">Approved Bookings</div>
           </a>
         </li>
         <li class="">
@@ -68,7 +77,7 @@
             <h2>Bookings</h2>
           </div>
          
-          <form method="post" action="deleteBookings.php">
+          <form method="post" action="toApprove.php">
             <?php
               error_reporting(0);
               require "connect.php";
@@ -90,7 +99,7 @@
               if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                   $user = $row['reserveId'];
-                  
+                  $status = $row['status'];
                   echo "<tr>";
                   echo "<th>" . $row['reserveId'] . "</th>";
                   echo "<th>" . $row['name'] . "</th>";
@@ -98,7 +107,11 @@
                   echo "<th>" . $row['date'] . "</th>";
                   echo "<th>" . $row['price'] . "</th>";
                   echo "<th>" . $row['status'] . "</th>";
-                  echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
+                  if ($status == "Unpaid") {
+                    echo "<th> <button type='submit' id='approve' class='del' name='approve' value='$user' hidden>Approve</button> </th>";
+                  } else {
+                    echo "<th> <button type='submit' id='approve' class='del' name='approve' value='$user'>Approve</button> </th>";
+                  }
                   echo "</tr>";
                   
                 }

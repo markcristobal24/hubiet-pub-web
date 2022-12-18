@@ -12,6 +12,7 @@
         $query = "UPDATE reserve SET status = '$status' WHERE reserveId = '$reserveId'";
         mysqli_query($con, $query);
         echo ("<script>alert('Payment Succesfully')</script>");
+        
         header("refresh: 0; url=myReserve.php");
     }
     else {

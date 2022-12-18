@@ -40,10 +40,10 @@
           <div class="right">
             <h2>Payment Method</h2>
           <form method="post" action="toPay.php">
-          <input type="text" class="field" placeholder="RESERVATION ID"  name="reserveId" required/>
+          <input type="text" class="field" placeholder="RESERVATION ID"  name="reserveId" value = "<?php echo $_SESSION["reserveId"] ?>" readonly/>
             <input type="text" class="field" placeholder="GCASH #"  name="gcash" required/>
             <input type="text" class="field" placeholder="REFERENCE #" name="reference" required/>
-            <input type="text" class="field" placeholder="AMOUNT" name="amount" required/>
+            <input type="text" class="field" placeholder="AMOUNT" name="amount" value = "<?php echo $_SESSION["price"] ?>" readonly/>
             <input class="btn" type="submit" value="SUBMIT"/>
             </form>  
           </div>

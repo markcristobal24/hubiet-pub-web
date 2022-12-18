@@ -19,6 +19,8 @@
 	if ($count2 ==1) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION["fname"] = $row['firstName'];
+		$full = $row['lastName'];
+		$_SESSION["full"] = $_SESSION["fname"] . " " . $full;
     	$_SESSION["email"] = $row['email'];
     	$_SESSION["phone"] = $row['phoneNumber'];
 	}

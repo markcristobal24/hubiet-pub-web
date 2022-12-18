@@ -41,12 +41,20 @@
           <div class="right">
             <h2>PACKAGE #2</h2>
           <form method="post" action="toPackage2.php">
-            <input type="text" class="field" placeholder="Name" name="fullname" required/>
+            <input type="text" class="field" placeholder="Name" name="fullname" value = "<?php echo $_SESSION["full"] ?>" readonly/>
             <input type="text" class="field" placeholder="Email" name="email" value = "<?php echo $_SESSION["email"]?>"readonly/>
             <input type="text" class="field" placeholder="Phone" name="phone" value = "<?php echo $_SESSION["phone"]?>"readonly/>
             <input type="number" class="field" placeholder="How many people" required name="noPeople" />
-            <input type="date" class="field" placeholder="Date and time" required name="date"
-              value="<?php echo date('Y-m-d'); ?>" />
+            <input type="date" class="field" placeholder="Date and time" name="date" id="date-picker"/>
+            <script language="javascript">
+              var today = new Date ();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0');
+              var yyyy = today.getFullYear();
+              today = yyyy + '-' + mm + '-' + dd;
+
+              $('#date-picker').attr('min', today);
+            </script>
             <textarea placeholder="Additional Message" class="field" name="message"></textarea>
             <input class="btn" type="submit" value="Reserve">
             </form> 

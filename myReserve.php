@@ -42,9 +42,13 @@
     </ul>
   </div>
 
-  <div class="center">
-    <h1>My Reservations</h1>
-  <form method = "post" action="deleteReserve.php">
+  <!--<div class="center"> -->
+    <div class="tablesbook">
+      <div class="latest-bookings2">
+        <div class="heading">
+          <h1>My Reservations</h1>
+        </div>
+        <form method = "post" action="deleteReserve.php">
     <?php
         error_reporting(0);
         require "connect.php";
@@ -52,7 +56,8 @@
         $phone = $_SESSION["phone"];
         $query = "SELECT * FROM reserve where email = '$email' and phone = '$phone'";
         $result = mysqli_query($con,$query);
-        echo "<table border ='1'>
+        echo "<table>
+        <thead>
         <tr>
             <th>Reservation Id</th>
             <th>Name</th>
@@ -63,36 +68,42 @@
             <th>Price</th>
             <th>Package</th>
             <th>Status</th>
-        </tr>";
+            <th>Action</th>
+        </tr>
+        </thead>";
         
         if (mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)){
                 $user = $row['reserveId'];
+                $_SESSION["reserveId"] = $user;
+                $amount = $row['price'];
+                $_SESSION["price"] = $amount;
                 echo "<tr>";
-                echo "<td>" . $row['reserveId'] . "</td>";
-                echo "<td>" . $row['name'] . "</td>";
-                echo "<td>" . $row['email'] . "</td>";
-                echo "<td>" . $row['phone'] . "</td>";
-                echo "<td>" . $row['noPeople'] . "</td>";
-                echo "<td>" . $row['date'] . "</td>";
-                echo "<td>" . $row['price'] . "</td>";
-                echo "<td>" . $row['packageType'] . "</td>";
-                echo "<td>" . $row['status'] . "</td>";
-                echo "<td> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </td>";
-                
+                echo "<th>" . $row['reserveId'] . "</th>";
+                echo "<th>" . $row['name'] . "</th>";
+                echo "<th>" . $row['email'] . "</th>";
+                echo "<th>" . $row['phone'] . "</th>";
+                echo "<th>" . $row['noPeople'] . "</th>";
+                echo "<th>" . $row['date'] . "</th>";
+                echo "<th>" . $row['price'] . "</th>";
+                echo "<th>" . $row['packageType'] . "</th>";
+                echo "<th>" . $row['status'] . "</th>";
+                echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
+                echo "<th><button type='button' class = 'pay'><a href='payment1.php'><span></span>PROCEED TO PAYMENT</a></button></th>";
                 echo "</tr>";
             }
         } 
-        else{
-            echo "No records found.";
-        }
         echo "</table>";
         mysqli_close($con);
 				
     ?>
   </form>
-  <button type="button" class = "pay"><a href="payment1.php"><span></span>PROCEED TO PAYMENT</a></button>
-  </div>
+      </div>
+    </div>
+   
+ 
+  
+  <!--</div> -->
 
 
 
