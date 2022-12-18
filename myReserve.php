@@ -75,9 +75,10 @@
         if (mysqli_num_rows($result) > 0){
             while($row = mysqli_fetch_assoc($result)){
                 $user = $row['reserveId'];
-                $_SESSION["reserveId"] = $user;
+                
                 $amount = $row['price'];
-                $_SESSION["price"] = $amount;
+               
+                $status = $row ['status'];
                 echo "<tr>";
                 echo "<th>" . $row['reserveId'] . "</th>";
                 echo "<th>" . $row['name'] . "</th>";
@@ -88,10 +89,18 @@
                 echo "<th>" . $row['price'] . "</th>";
                 echo "<th>" . $row['packageType'] . "</th>";
                 echo "<th>" . $row['status'] . "</th>";
-                echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
-                echo "<th><button type='button' class = 'pay'><a href='payment1.php'><span></span>PROCEED TO PAYMENT</a></button></th>";
+  
+                if ($status == "Unpaid") {
+                  echo "<th> <button type='submit' class='del' name='delete' value='$user'>Cancel</button> </th>";
+                    
+                  echo "<th><button  type='button' class = 'pay' name='process' value='$user'><a href='payment1.php'><span></span>PROCEED TO PAYMENT</a></button></th>";
+                } else {
+                  echo "<th> <button type='submit' class='del' name='delete' value='$user' hidden>Cancel</button> </th>";
+                  echo "<th><button  type='button' class = 'pay' hidden><a><span></span>PROCEED TO PAYMENT</a></button></th>";
+                }
                 echo "</tr>";
             }
+            
         } 
         echo "</table>";
         mysqli_close($con);

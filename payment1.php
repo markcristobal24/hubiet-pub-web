@@ -22,6 +22,7 @@
       <ul>
       <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
+                <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
                       echo $_SESSION ["fname"];
                         
@@ -35,19 +36,26 @@
     </div>
 
     <body>
-      <div class="container">
-        <div class="contact-box">
-          <div class="right">
-            <h2>Payment Method</h2>
+      <div class="center">
+            <h1>Payment Method</h1>
           <form method="post" action="toPay.php">
-          <input type="text" class="field" placeholder="RESERVATION ID"  name="reserveId" value = "<?php echo $_SESSION["reserveId"] ?>" readonly/>
-            <input type="text" class="field" placeholder="GCASH #"  name="gcash" required/>
-            <input type="text" class="field" placeholder="REFERENCE #" name="reference" required/>
-            <input type="text" class="field" placeholder="AMOUNT" name="amount" value = "<?php echo $_SESSION["price"] ?>" readonly/>
+            <div class="txt_field">
+              <input type="text" name="reserveId"  required>
+              <span></span>
+              <label>Reservation ID</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="gcash" required>
+              <span></span>
+              <label>GCASH Number</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="reference" required>
+              <span></span>
+              <label>Reference Number</label>
+            </div>
             <input class="btn" type="submit" value="SUBMIT"/>
             </form>  
-          </div>
-        </div>
       </div>
     </body>
 

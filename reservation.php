@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
 
 <body>
@@ -48,9 +50,26 @@
             <p class="prod1">2 HOURS<br>1 BUCKET OF BEERS (RED HORSE, PALE PILSEN, SAN MIG LIGHT, LEMON, OR
                 APPLE)<br>1
                 NACHOS<br>1 DYNAMITE<br>1 PORK SISIG</p>
-            <div class="btn1">
-                <button type="button1"><a href="package1.php"><span></span>RESERVE NOW!</a></button>
+            <form method="post" action="checkAvailability1.php">
+                <div class="txt_field">
+                <label>Check-In Date</label>
+                    <input type="date" name="check-date" id="date-picker1" required>
+                    <span></span>
+                    <script language="javascript">
+              var today = new Date ();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0');
+              var yyyy = today.getFullYear();
+              today = yyyy + '-' + mm + '-' + dd;
+
+              $('#date-picker1').attr('min', today);
+            </script>
+                </div>
+                <div class="btn1">
+                <input type="submit" value="RESERVE NOW!">
             </div>
+            </form>
+            
         </div>
 
         <div class="block">
@@ -60,9 +79,26 @@
             <p class="prod2">2 HOURS<br>2 BUCKET OF BEERS (RED HORSE, PALE PILSEN, SAN MIG LIGHT, LEMON, OR
                 APPLE)<br>1
                 NACHOS<br>1 DYNAMITE<br>1 CHEESE STICK</p>
-            <div class="btn2">
-                <button type="button1"><a href="package2.php"><span></span>RESERVE NOW!</a></button>
+                <form method="post" action="checkAvailability2.php">
+                <div class="txt_field">
+                <label>Check-In Date</label>
+                    <input type="date" name="check-date" id="date-picker2" required>
+                    <span></span>
+                    <script language="javascript">
+              var today = new Date ();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0');
+              var yyyy = today.getFullYear();
+              today = yyyy + '-' + mm + '-' + dd;
+
+              $('#date-picker2').attr('min', today);
+            </script>
+                </div>
+                <div class="btn2">
+                <input type="submit" value="RESERVE NOW!">
             </div>
+            </form>
+          
         </div>
 
         <div class="block">
@@ -73,28 +109,32 @@
                 APPLE)<br>1
                 NACHOS, 1 DYNAMITE, 1 PORK SISIG, 1 CHICKEN WINGS SALTED EGG, 1 CHICKEN TERIYAKI, 1 CRISPY BICOL
                 EXPRESS, 1 SHANGHAI, 1 CHEESE STICK</p>
-            <div class="btn3">
-                <button type="button1"><a href="package3.php"><span></span>RESERVE NOW!</a></button>
+                <form method="post" action="checkAvailability3.php">
+                <div class="txt_field">
+                <label>Check-In Date</label>
+                    <input type="date" name="check-date" id="date-picker3" required>
+                    <span></span>
+                    <script language="javascript">
+              var today = new Date ();
+              var dd = String(today.getDate()).padStart(2, '0');
+              var mm = String(today.getMonth() + 1).padStart(2, '0');
+              var yyyy = today.getFullYear();
+              today = yyyy + '-' + mm + '-' + dd;
+
+              $('#date-picker3').attr('min', today);
+            </script>
+                </div>
+                <div class="btn1">
+                <input type="submit" value="RESERVE NOW!">
             </div>
+            </form>
+            
         </div>
 
     </div>
 
 
-    <section class="footer">
-        <div class="social">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><img src="contacts.png" width="23px" height="20px"></a>
-
-            <p class="copyright">
-                © 2022, Hubient Bar & Lounge.<br> All Rights Reserved.
-            </p>
-
-        </div>
-
-    </section>
+    
 </body>
 
 </html>
