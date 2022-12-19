@@ -37,7 +37,7 @@
         <label>Password</label>
       </div>
 
-      <div class="pass">Forgot Password?</div>
+      <!--<div class="pass">Forgot Password?</div> -->
       <input type="submit" value="Login">
       <div class="signup_link">
         Not a member? <a href="register.php">Signup</a>
