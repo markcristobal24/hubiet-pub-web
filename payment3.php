@@ -22,8 +22,9 @@
       <ul>
       <li><a href="home.php">Home</a></li>
                 <li><a href="about-user.php">About</a></li>
+                <li><a href="myReserve.php">My Reservation</a></li>
                 <li class="welcome">WELCOME&nbsp; <?php 
-                      echo $_SESSION ["username"];
+                      echo $_SESSION ["fname"];
                         
                     ?>&nbsp;▼
                     <ul class="dropdown">
@@ -35,16 +36,31 @@
     </div>
 
     <body>
-      <div class="container">
-        <div class="contact-box">
-          <div class="right">
-            <h2>Payment Method</h2>
-            <input type="text" class="field" placeholder="GCASH #" />
-            <input type="text" class="field" placeholder="REFERENCE #" />
-            <input type="text" class="field" placeholder="AMOUNT" />
-            <button class="btn">SUBMIT<a href="payment1.php"></button>
-          </div>
-        </div>
+      <div class="center">
+            <h1>Payment Method</h1>
+          <form method="post" action="toPay.php">
+            <div class="txt_field">
+              <input type="text" name="reserveId" required>
+              <span></span>
+              <label>Reservation ID</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="gcash" required>
+              <span></span>
+              <label>GCASH Number</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="reference" required>
+              <span></span>
+              <label>Reference Number</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="reference" value="PHP5,000" required>
+              <span></span>
+              <label>Amount</label>
+            </div>
+            <input class="btn" type="submit" value="SUBMIT"/>
+            </form>  
       </div>
     </body>
 

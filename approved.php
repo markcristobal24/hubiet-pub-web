@@ -38,7 +38,7 @@
         <li class="t5">
           <a href="approved.php">
             <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
-            <div class="title">Approved Bookings</div>
+            <div class="title">Bookings History</div>
           </a>
         </li>
         <li class="">
@@ -71,12 +71,12 @@
       <div class="tablesbook">
         <div class="lastest-bookings2">
           <div class="heading">
-            <h2>Approved Bookings</h2>
+            <h2>Bookings History</h2>
           </div>    
             <?php
               error_reporting(0);
               require "connect.php";
-              $query = "SELECT * FROM archive";
+              $query = "SELECT * FROM reserve";
               $result = mysqli_query($con, $query);
               echo "<table>
               <thead>

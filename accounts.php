@@ -38,7 +38,7 @@
         <li class="">
           <a href="approved.php">
             <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
-            <div class="title">Approved Bookings</div>
+            <div class="title">Bookings History</div>
           </a>
         </li>
         <li class="t33">

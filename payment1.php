@@ -40,7 +40,7 @@
             <h1>Payment Method</h1>
           <form method="post" action="toPay.php">
             <div class="txt_field">
-              <input type="text" name="reserveId" value="<?php echo $_SESSION["reserve"] ?>" required>
+              <input type="text" name="reserveId" required>
               <span></span>
               <label>Reservation ID</label>
             </div>
@@ -53,6 +53,11 @@
               <input type="text" name="reference" required>
               <span></span>
               <label>Reference Number</label>
+            </div>
+            <div class="txt_field">
+              <input type="text" name="reference" required>
+              <span></span>
+              <label>Amount</label>
             </div>
             <input class="btn" type="submit" value="SUBMIT"/>
             </form>  

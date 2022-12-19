@@ -41,7 +41,7 @@
         <li class="">
           <a href="approved.php">
             <img src="bookingicon.png" alt="test" class="img2" width="23px" height="20px" />
-            <div class="title">Approved Bookings</div>
+            <div class="title">Bookings History</div>
           </a>
         </li>
         <li class="">
@@ -92,7 +92,7 @@
                 <th>Date</th>
                 <th>Price</th>
                 <th>Status</th>
-                <th>Action</th>
+                
               </tr>
               </thead>";
 
@@ -107,11 +107,11 @@
                   echo "<th>" . $row['date'] . "</th>";
                   echo "<th>" . $row['price'] . "</th>";
                   echo "<th>" . $row['status'] . "</th>";
-                  if ($status == "Unpaid") {
+                 /* if ($status == "Unpaid") {
                     echo "<th> <button type='submit' id='approve' class='del' name='approve' value='$user' hidden>Approve</button> </th>";
                   } else {
                     echo "<th> <button type='submit' id='approve' class='del' name='approve' value='$user'>Approve</button> </th>";
-                  }
+                  }*/
                   echo "</tr>";
                   
                 }
